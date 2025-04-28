@@ -6,22 +6,22 @@ Block Elements
 <section>
 <header>
 <footer>
-<nav></nav>
+<nav>
 <aside>
-<article>, 
-<ol>/<li>, 
-<ul>/<li>,   
-<form>,  
-<textarea>, 
+<article>
+<ol>/<li>
+<ul>/<li>
+<form>
 
 Inline Elements:
 <span>
 <br>
- <img>
- <a>,
- <strong>,
- <i>,
+<img>
+<a>
+<strong> 
+<i>
 <input>
 <button>
-<select>/<option>,
+<select>/<option>
 <label>
+<textarea>
