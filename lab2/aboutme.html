@@ -52,11 +52,11 @@
         <h2>My moods</h2>
         <div id="moods">
           <div>
-            <h6>Happy</h6>
+            <h6 class="mood">Happy</h6>
             <img src="../images/anonymous.jpg" alt="anonymous" />
           </div>
           <div>
-            <h6>Sad</h6>
+            <h6 class="mood">Sad</h6>
             <img src="../images/anonymous.jpg" alt="anonymous" />
           </div>
         </div>
@@ -69,7 +69,36 @@
         </ul>
       </section>
       <footer>
-        <div>
+        <form id="contact-form">
+          <h2>Contact Me</h2>
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Have something you wanna tell me?</legend>
+              <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div>
+                <input type="submit" value="Send Message" />
+              </div>
+            </fieldset>
+          </form>
+        </form>
+        <div id="validation-buttons">
           <p>
             <a
               href=" https://validator.w3.org/check?url=https://lytes20.github.io/wap-homepage/lab2/aboutme.html"

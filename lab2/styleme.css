@@ -8,9 +8,20 @@ body {
   background-color: #fedbd0;
   font-size: 18px;
 }
+a {
+  text-decoration: none;
+  color: #442c2e;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 section {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.mood {
+  font-style: italic;
 }
 span {
   font-weight: bold;
@@ -48,13 +59,29 @@ ul li {
   width: 50%;
 }
 
-footer div {
+#validation-buttons {
   display: flex;
   width: 50%;
 }
-footer p {
+#validation-buttons p {
   width: 200px;
 }
-footer img {
+#validation-buttons img {
+  width: 100%;
+}
+p::first-letter {
+  float: left;
+  font-family: Georgia;
+  font-size: 75px;
+}
+#contact-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+fieldset {
+  padding: 20px;
+}
+input,
+textarea {
   width: 100%;
 }
