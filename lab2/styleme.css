@@ -12,7 +12,13 @@ section {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
+span {
+  font-weight: bold;
+}
+h1 {
+  font-family: Arial Black;
+  font-size: 30px;
+}
 h1,
 h2,
 h3,
