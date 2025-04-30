@@ -1,3 +1,4 @@
+"use strict";
 let data = [];
 export function get_items() {
   return data;
