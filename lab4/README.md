@@ -1,6 +1,6 @@
 ## Table of Contents
 
-- [Code 1 Analysis: Complex Variable Scoping](#code-1-analysis)
+- [Code 1 Analysis](#code-1-analysis)
 - [Code 2 Analysis](#code-2-analysis)
 - [Code 3 Analysis](#code-3-analysis)
 
