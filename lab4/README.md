@@ -93,12 +93,7 @@ document.write(x);
 ### Final Output
 
 ```
-undefined
-8
-8
-9
-10
-undefined
+undefined88910undefined
 ```
 
 ##
