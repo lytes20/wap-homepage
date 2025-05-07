@@ -1,13 +1,15 @@
 class Meditation {
+  #counter = 5;
   start() {
     let timerId = setInterval(() => {
-      console.log("5");
+      console.log(this.#counter);
+      this.#counter--;
     }, 1000);
     // after 5 seconds stop
     setTimeout(() => {
       clearInterval(timerId);
       console.log("Jay Guru Dev");
-    }, 5000);
+    }, 6000);
   }
 }
 const morning_meditation = new Meditation(5);
