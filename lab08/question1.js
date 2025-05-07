@@ -8,8 +8,9 @@ class Meditation {
     // after 5 seconds stop
     setTimeout(() => {
       clearInterval(timerId);
+      console.log(this.#counter);
       console.log("Jay Guru Dev");
-    }, 6000);
+    }, 5000);
   }
 }
 const morning_meditation = new Meditation(5);
