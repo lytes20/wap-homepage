@@ -1,4 +1,4 @@
-import ProductList from "./components/ProductList";
+import ProductList from "./usingState/ProductList";
 import ProductList2 from "./usingReducer/ProductList";
 
 import "./global.css";
