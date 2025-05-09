@@ -1,11 +1,14 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+
 const BookContext = createContext(null);
+
 export const BookProvider = ({ children }) => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [openAddBook, setOpenAddBook] = useState(false);
   const [openEditBook, setOpenEditBook] = useState(false);
+  const [refetch, setRefetch] = useState(1);
 
   const getBooks = async function () {
     setLoading(true);
@@ -22,12 +25,12 @@ export const BookProvider = ({ children }) => {
   };
   useEffect(() => {
     getBooks();
-  }, []);
+  }, [refetch]);
 
-  console.log(books);
   // Implement CRUD functions and useEffect here
   function addBook(title, author) {
     const submitBook = async function () {
+      setLoading(true);
       await fetch("https://67d17ef590e0670699ba5929.mockapi.io/books", {
         method: "POST",
         body: JSON.stringify({ title, author }),
@@ -37,6 +40,8 @@ export const BookProvider = ({ children }) => {
       }).then((response) => {
         //   return response.json();
         setOpenAddBook(false);
+        setRefetch((prev) => prev + 1);
+        setLoading(false);
       });
       // .then((json) => console.log(json));
     };
@@ -44,6 +49,7 @@ export const BookProvider = ({ children }) => {
     submitBook();
   }
   function updateBook(title, author, id) {
+    setLoading(true);
     const editBook = async function () {
       await fetch(`https://67d17ef590e0670699ba5929.mockapi.io/books/${id}`, {
         method: "PUT",
@@ -51,29 +57,30 @@ export const BookProvider = ({ children }) => {
         headers: {
           "Content-Type": "application/json",
         },
-      })
-        .then((response) => {
-          console.log("PUT response", response);
-          setOpenEditBook(false);
-          return response.json();
-        })
-        .then((json) => console.log(json));
+      }).then((response) => {
+        setOpenEditBook(false);
+        setRefetch((prev) => prev + 1);
+        setLoading(false);
+        // return response.json();
+      });
+      // .then((json) => console.log(json));
     };
     editBook();
   }
   function deleteBook(id) {
+    setLoading(true);
     const handleDelete = async function () {
       await fetch(`https://67d17ef590e0670699ba5929.mockapi.io/books/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
-      })
-        .then((response) => {
-          console.log("POST response", response);
-          return response.json();
-        })
-        .then((json) => console.log(json));
+      }).then((response) => {
+        setRefetch((prev) => prev + 1);
+        setLoading(false);
+        // return response.json();
+      });
+      // .then((json) => console.log(json));
     };
 
     handleDelete();
