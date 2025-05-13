@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  width: 80%;
+  margin: 0 auto;
+}
+.books {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+
+.add-book {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+.input-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+}
